@@ -1,0 +1,9 @@
+---
+title: "EWZ & Bovespa Analysis"
+author: "John"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("ewz_bvsp/load_data.r")
