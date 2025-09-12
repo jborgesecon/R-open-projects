@@ -4,6 +4,10 @@ library(RPostgres)
 library(dotenv)
 library(readr)
 library(dplyr)
+library(glue)
+
+
+dotenv::load_dot_env()
 
 # # conn
 # Set up connection (example with PostgreSQL)
