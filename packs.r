@@ -5,10 +5,18 @@ packs <- c(
   "scales",
   "ggplot2",
   "ggcorrplot",
+  "plotly",
+  "animation",
+  "quantmod",
+  "gganimate",
   "DBI",
   "RPostgres",
   "dotenv",
-  "readr"
+  "readr",
+  "shiny",
+  "shinythemes",
+  "shinyjs",
+  "magick"
 )
 
 install.packages(packs, dependencies = TRUE)

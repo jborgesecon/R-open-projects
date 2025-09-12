@@ -6,14 +6,16 @@ library(scales)
 library(ggplot2)
 library(ggcorrplot)
 
+# import all sources from analysis/ at once
+
 
 # # Importar e normalizar os dados via Yahoo Finance
 # Definir simbolos e datas
 symbols <- c('EWZ', '^BVSP')
 prices <- yf_get(
     tickers = symbols,
-    first_date = '2025-01-01',
-    last_date = '2025-04-01',
+    first_date = '2023-01-01',
+    last_date = '2023-04-01',
     freq_data = 'daily'
 )
 
@@ -61,4 +63,15 @@ grafico_1 <- ggplot(prices_merged, aes(x=ref_date, y=price_close, color=ticker))
     )
 
 
-print(grafico_1)
+# Set working directory to the script's location
+script_dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+if (nchar(script_dir) > 0) {
+    setwd(script_dir)
+}
+
+if (file.exists("ewz_bvsp/monolith.r")) {
+    source("ewz_bvsp/monolith.r")
+} else {
+    warning("File 'ewz_bvsp/monolith.r' not found. Skipping source.")
+}
+grafico_1
