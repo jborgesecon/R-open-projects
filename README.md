@@ -39,3 +39,8 @@ source("run_analysis.R")
 *   `yfR`: Yahoo Finance data interface.
 *   `urca` & `tseries`: Unit root and stationarity testing.
 *   `ggplot2` & `patchwork`: Publication-ready visualizations.
+
+
+## AI Disclosure
+
+During the development of this project, generative AI (Claude Sonnet 4.6, Anthropic) was utilized via terminal as a coding assistant for code review, general optimization, and structural support (specifically within ./analysis/asymmetry.R and the ADL equation). The core econometric logic, pipeline design, and initial implementations were developed by the author. The author thoroughly reviewed, tested, and assumes full responsibility for the validity of the final code and analytical outputs.

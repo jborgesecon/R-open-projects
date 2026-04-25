@@ -47,6 +47,7 @@ ms_garch <- function(tslist, display = TRUE) {
     sigma <- as.xts(Volatility(fit))
     y <- as.xts(fit$data)
     series[[i]] <- log(sigma)
+    # series[[i]] <- y / sigma  # uncomment this line to evaluate the residuals
 
     if (display) {
       print(paste0("Markov-Switching Garch for ticker: ", i))
